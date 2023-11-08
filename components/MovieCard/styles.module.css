@@ -1,0 +1,22 @@
+.card__container {
+    width: 240px;
+    height: 420px;
+    border: 2px solid #9D76C1;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 24px;
+}
+
+.title {
+    color: white;
+    font-weight: 700;
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px 12px;
+    width: 100%;
+}

@@ -1,0 +1,12 @@
+.genre {
+    border: 2px solid #9D76C1;
+    font-size: 14px;
+    border-radius: 8px;
+    color: #9D76C1;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    padding: 4px 8px;
+}
