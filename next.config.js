@@ -8,7 +8,7 @@ module.exports = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'www.themoviedb.org',
+                hostname: 'image.tmdb.org',
             }
         ]
     }
