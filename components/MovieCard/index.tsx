@@ -3,16 +3,27 @@ import Image from 'next/image';
 import Genre from '@/components/Genre';
 
 type MovieCardProps = {
-    poster_path: string,
+    posterPath: string,
     title: string,
-    genres: string[] 
+    genreIds: number[],
+    genreNames: {id: number, name: string}[]
 };
 
-export default function MovieCard({poster_path, title, genres}: MovieCardProps): React.JSX.Element {
+export default function MovieCard({posterPath, title, genreIds, genreNames}: MovieCardProps): React.JSX.Element {
+    const genres: string[] = [];
+
+    for (let i = 0; i < genreNames.length; i++) {
+        for (let j = 0; j < genreIds.length; j++) {
+            if (genreNames[i].id === genreIds[j]) {
+                genres.push(genreNames[i].name);
+            }
+        }
+    }
+    
     return (
         <div className={styles.card__container}>
             <Image 
-                src={`https://image.tmdb.org/t/p/original${poster_path}`} 
+                src={`https://image.tmdb.org/t/p/original${posterPath}`} 
                 alt="Плакат серіалу" 
                 width={240} 
                 height={320}
