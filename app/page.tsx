@@ -23,7 +23,7 @@ export default async function PopularMovies() {
 
   return (
     <main>
-      {popularMovies.results.map((item: { poster_path: string; title: string; id: number;}) => <MovieCard movieId={item.id} poster={item.poster_path} title={item.title} genres={movieGenres}/>)}
+      {popularMovies.results.map((item: { poster_path: string; title: string; id: number;}) => <MovieCard poster_path={item.poster_path} title={item.title} genres={movieGenres}/>)}
     </main>
   )
 }

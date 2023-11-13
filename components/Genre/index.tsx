@@ -1,9 +1,13 @@
 import styles from './styles.module.css';
 
-export default function Genre(props: {genre: string}){
+type GenreProps = {
+    genreName: string;
+};
+
+export default function Genre({ genreName }: GenreProps) {
     return (
         <div className={styles.genre}>
-            {props.genre}
+            {genreName}
         </div>
     );
 }
