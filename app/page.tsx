@@ -30,11 +30,11 @@ async function getGenres(options: {method: string, headers: {accept: string, Aut
 
 export default async function PopularMovies() {
   const popularMovies = await getPopularMovies(options);
-  const genreNames = await getGenres(options);
+  const allGenres = await getGenres(options);
 
   return (
     <main>
-      {popularMovies.results.map((item: { poster_path: string; title: string; genre_ids: number[]; genre_names: {id: number, name: string}[]}) => <MovieCard posterPath={item.poster_path} title={item.title} genreIds={item.genre_ids} genreNames={genreNames.genres}/>)}
+      {popularMovies.results.map((item: { poster_path: string; title: string; genre_ids: number[]; }) => <MovieCard posterPath={item.poster_path} title={item.title} genreIds={item.genre_ids} allGenreNames={allGenres.genres}/>)}
     </main>
   )
 }

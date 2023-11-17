@@ -1,25 +1,19 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
 import Genre from '@/components/Genre';
+import Movie from '@/models/Movie';
 
 type MovieCardProps = {
     posterPath: string,
     title: string,
     genreIds: number[],
-    genreNames: {id: number, name: string}[]
+    allGenreNames: {id: number, name: string}[]
 };
 
-export default function MovieCard({posterPath, title, genreIds, genreNames}: MovieCardProps): React.JSX.Element {
-    const genres: string[] = [];
+export default function MovieCard({posterPath, title, genreIds, allGenreNames}: MovieCardProps): React.JSX.Element {
+    const movie = new Movie(title, posterPath, genreIds);
+    const genres = movie.getGenreNames(allGenreNames);
 
-    for (let i = 0; i < genreNames.length; i++) {
-        for (let j = 0; j < genreIds.length; j++) {
-            if (genreNames[i].id === genreIds[j]) {
-                genres.push(genreNames[i].name);
-            }
-        }
-    }
-    
     return (
         <div className={styles.card__container}>
             <Image 
