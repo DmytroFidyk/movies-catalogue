@@ -1,0 +1,33 @@
+.card__container {
+    width: 240px;
+    height: 460px;
+    border: 2px solid #9D76C1;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 24px;
+}
+
+.title__container {  
+    display: flex;
+    padding: 8px 12px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.title {
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px 12px;
+    width: 100%;
+}
