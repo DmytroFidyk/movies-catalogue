@@ -1,3 +1,4 @@
+import Header from '@/components/Header';
 import MovieCard from '@/components/MovieCard';
 
 const options = {
@@ -33,8 +34,11 @@ export default async function PopularMovies() {
   const allGenres = await getGenres(options);
 
   return (
-    <main>
-      {popularMovies.results.map((item: { poster_path: string; title: string; genre_ids: number[]; }) => <MovieCard posterPath={item.poster_path} title={item.title} genreIds={item.genre_ids} allGenreNames={allGenres.genres}/>)}
-    </main>
+    <>
+      <Header/>
+      <main>
+        {popularMovies.results.map((item: { poster_path: string; title: string; genre_ids: number[]; }) => <MovieCard posterPath={item.poster_path} title={item.title} genreIds={item.genre_ids} allGenreNames={allGenres.genres}/>)}
+      </main>
+    </>
   )
 }
