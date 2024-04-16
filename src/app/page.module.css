@@ -2,3 +2,10 @@
   display: flex;
   flex-direction: column;
 }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 42px;
+}
