@@ -1,0 +1,7 @@
+.heading {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding: 14px 42px;
+}

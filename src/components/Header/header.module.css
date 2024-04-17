@@ -1,11 +1,24 @@
 .header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 72px;
     background-color: #222831;
     color: #BC7FCD;
+    padding: 0px 42px;
 }
 
 .heading {
-    margin-left: 42px;
+    width: 90%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.nav a {
+    color: white;
+    font-size: 20px;
 }

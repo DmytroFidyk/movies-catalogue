@@ -15,11 +15,12 @@ type Movies = Movie[];
 
 export default function Home() {
   const [popularMovies, setPopularMovies] = useState<Movies>([]);
+  
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${process.env.TMDB_API_TOKEN}`
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_API_TOKEN}`
     }
   };
 
@@ -33,6 +34,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Header/>
+      <h1 className={styles.heading}>Популярні</h1>
       <div className={styles.list}>
       {popularMovies.map(item => {
         return <MovieCard key={item.id} id={item.id} title={item.title} poster_path={item.poster_path}/>
