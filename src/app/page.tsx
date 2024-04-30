@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import Header from '@/components/Header';
+import Heading from '@/components/Heading';
 import MovieCard from '@/components/MovieCard';
 import { IMovie } from '@/interfaces/IMovie';
 
@@ -29,7 +30,7 @@ const Home = () => {
   return (
     <main className={styles.main}>
       <Header/>
-      <h1 className={styles.heading}>Популярні</h1>
+      <Heading text='Популярні'/>
       <div className={styles.list}>
       {popularMovies.map(item => {
         return <MovieCard key={item.id} id={item.id} title={item.title} poster_path={item.poster_path}/>

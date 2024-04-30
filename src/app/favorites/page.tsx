@@ -1,11 +1,11 @@
-import styles from './page.module.css';
 import Header from '@/components/Header';
+import Heading from '@/components/Heading';
 
 const Favorites = () => {
     return (
         <>
             <Header/>
-            <h1 className={styles.heading}>Вибрані фільми</h1>
+            <Heading text='Вибрані фільми'/>
         </>
     );
 }
