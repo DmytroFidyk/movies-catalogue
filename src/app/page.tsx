@@ -1,21 +1,14 @@
 'use client';
 
-import { useEffect, useState } from "react";
-import styles from "./page.module.css";
-import MovieCard from "@/components/MovieCard";
-import Header from "@/components/Header";
+import { useState, useEffect } from 'react';
+import styles from './page.module.css';
+import Header from '@/components/Header';
+import MovieCard from '@/components/MovieCard';
+import { IMovie } from '@/interfaces/IMovie';
 
-export interface Movie {
-  id: number,
-  title: string,
-  poster_path: string,
-  overview?: string,
-  genres?: []
-};
+type Movies = IMovie[]; 
 
-type Movies = Movie[]; 
-
-export default function Home() {
+const Home = () => {
   const [popularMovies, setPopularMovies] = useState<Movies>([]);
   
   const options = {
@@ -44,4 +37,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

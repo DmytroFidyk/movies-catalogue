@@ -1,7 +1,7 @@
 import styles from './page.module.css';
-import Header from "@/components/Header";
+import Header from '@/components/Header';
 
-export default function Favorites() {
+const Favorites = () => {
     return (
         <>
             <Header/>
@@ -9,3 +9,5 @@ export default function Favorites() {
         </>
     );
 }
+
+export default Favorites;
