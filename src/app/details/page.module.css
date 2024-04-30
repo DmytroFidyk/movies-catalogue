@@ -1,0 +1,37 @@
+
+.main {
+    color: white;
+    padding: 42px;
+}
+
+.movie_details {
+    display: flex;
+}
+
+.movie_title {
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.text_details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+}
+
+.genres_container {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.genre {
+    background-color: #212121;
+    border: 2px solid #BC7FCD;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 4px;
+    color: #BC7FCD;
+    margin-right: 8px;
+}

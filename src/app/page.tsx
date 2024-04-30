@@ -8,7 +8,9 @@ import Header from "@/components/Header";
 export interface Movie {
   id: number,
   title: string,
-  poster_path: string
+  poster_path: string,
+  overview?: string,
+  genres?: []
 };
 
 type Movies = Movie[]; 
