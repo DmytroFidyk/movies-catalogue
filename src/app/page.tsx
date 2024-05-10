@@ -32,9 +32,9 @@ const Home = () => {
       <Header/>
       <Heading text='Популярні'/>
       <div className={styles.list}>
-      {popularMovies.map(item => {
+      {popularMovies ? popularMovies.map(item => {
         return <MovieCard key={item.id} id={item.id} title={item.title} poster_path={item.poster_path}/>
-      })}
+      }) : []}
       </div>
     </main>
   );

@@ -28,12 +28,17 @@ export default function DetailsPage() {
         .catch(error => console.error(error));
     }, []);
 
+
+    const imagePath = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
+    const altText = `Постер фільму ${movie.title}`;
+
     return (
         <>
             <Header/>
             <main className={styles.main}>
                 <div className={styles.movie_details}>
-                    <Image src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} width={400} height={600} alt={`Постер фільму ${movie.title}`}/>
+                <Image src={movie.poster_path ? imagePath : '/film-reel.png'} width={400} height={600} alt={movie.title ? altText : 'Немає зображення}'}/>
+                    
                     <div className={styles.text_details}>
                         <h1 className={styles.movie_title}>{movie.title}</h1>
                         <div className={styles.genres_container}>
