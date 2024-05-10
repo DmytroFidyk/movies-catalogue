@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { IMovie } from '@/interfaces/IMovie';
 import styles from './page.module.css';
-import Header from "@/components/Header";
+import Header from '@/components/Header';
 import Image from 'next/image';
+import Genre from '@/components/Genre';
 
 export default function DetailsPage() {
     const [movie, setMovie] = useState<IMovie>({id: 0, title: '', poster_path: '', overview: '', genres: []});
@@ -36,7 +37,9 @@ export default function DetailsPage() {
                     <div className={styles.text_details}>
                         <h1 className={styles.movie_title}>{movie.title}</h1>
                         <div className={styles.genres_container}>
-                            {movie.genres ? movie.genres.map((genre: {name: string}) => <div key={genre.name} className={styles.genre}>{genre.name}</div>) : 'Немає жанрів'}
+                            {movie.genres?.map((genre: {id: number, name: string}) => {
+                                return <Genre key={genre.id} name={genre.name}/>
+                            })}
                         </div>
                         <p>{movie.overview}</p>
                     </div>  

@@ -1,0 +1,10 @@
+.genre {
+    background-color: #212121;
+    border: 2px solid #BC7FCD;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 4px;
+    color: #BC7FCD;
+    margin-right: 8px;
+}
